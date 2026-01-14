@@ -1,28 +1,15 @@
 package domain;
 
-public class Course {
+public class Course extends Content {
 
-    private String name;
-    private String description;
     private int courseLoad;
 
     public Course() {
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    @Override
+    public double calculateXp() {
+        return XP_PADRAO * courseLoad;
     }
 
     public int getCourseLoad() {
@@ -36,8 +23,8 @@ public class Course {
     @Override
     public String toString() {
         return "Course{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
+                "name='" + getName() + '\'' +
+                ", description='" + getDescription() + '\'' +
                 ", courseLoad=" + courseLoad +
                 '}';
     }

@@ -1,3 +1,4 @@
+import domain.Content;
 import domain.Course;
 import domain.Mentoring;
 
@@ -28,6 +29,12 @@ public class Main {
         mentoring1.setDate(LocalDate.of(LocalDate.now().getYear(), Month.FEBRUARY, 10));
 
         System.out.println(mentoring1);
+
+        Content content1 = new Course();
+        System.out.println(content1.getClass().toString());
+
+        Content content2 = new Mentoring();
+        System.out.println(content2.getClass().toString());
 
     }
 }
